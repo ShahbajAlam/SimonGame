@@ -13,7 +13,11 @@ body {
   background-color: #f1a1a1;
   text-align: center;
   font-family: "Montserrat";
-  width: 100vw;
+  overflow-x: hidden;
+}
+
+html{
+  overflow-x: hidden;
 }
 
 /* ========================================Navbar========================================= */
