@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Game</title>
+    <link rel="shortcut icon" href="simon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <nav>
+      <img src="simon.svg" alt="simon-logo" />
+      <span class="hamburger" id="hamburger"></span>
+    </nav>
+    <div class="about-game">
+      <p>
+        Simon is a game of short-term memory skill invented by Ralph H. Baer and
+        Howard J. Morrison. The game creates a sequence and requires a user to
+        repeat the sequence. If the user succeeds, the sequence becomes
+        progressively longer and more complex. Once the user fails, the game is
+        over.
+      </p>
+      <p><> with ❤️ by <strong>Naheed</strong></p>
+    </div>
+
+    <h1 class="big-heading">Simon Game</h1>
+    <h1 id="level-title">Press play button to start</h1>
+    <div class="container">
+      <div type="button" id="green" class="btn green"></div>
+      <div type="button" id="red" class="btn red"></div>
+      <div type="button" id="yellow" class="btn yellow"></div>
+      <div type="button" id="blue" class="btn blue"></div>
+    </div>
+
+    <button class="play-button">Play</button>
+
+    <div class="game-over">
+      <h1>🥺</h1>
+      <h2>Oops !!</h2>
+      <h2>Game Over</h2>
+      <div class="show-score"></div>
+      <p>Click anywhere to go home</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
