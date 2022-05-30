@@ -302,14 +302,14 @@ img {
   background-color: #f34646;
   color: white;
   letter-spacing: 0.2rem;
-  top: 100%;
-  left: 0;
+  top: 0;
+  left: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0 5rem;
-  transform-origin: bottom;
+  transform-origin: right;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
