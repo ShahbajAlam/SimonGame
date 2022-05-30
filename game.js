@@ -102,11 +102,11 @@ function checkAnswer(param) {
     }
   } else if (level !== 0) {
     makeSound("wrong");
-    document.querySelector(".game-over").style.top = "0";
+    document.querySelector(".game-over").style.left = "0";
     document.querySelector(".show-score").innerHTML =
       "<h2>Your level is " + level + "</h2>";
     document.querySelector(".game-over").addEventListener("click", function () {
-      document.querySelector(".game-over").style.top = "100%";
+      document.querySelector(".game-over").style.left = "100%";
     });
     document.querySelector(".play-button").classList.add("show-play-button");
     startOver();
