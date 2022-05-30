@@ -106,7 +106,7 @@ function checkAnswer(param) {
     document.querySelector(".show-score").innerHTML =
       "<h2>Your level is " + level + "</h2>";
     document.querySelector(".game-over").addEventListener("click", function () {
-      document.querySelector(".game-over").style.left = "100%";
+      document.querySelector(".game-over").style.left = "-100%";
     });
     document.querySelector(".play-button").classList.add("show-play-button");
     startOver();
