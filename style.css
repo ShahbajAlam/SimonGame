@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #90b77d;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0.5rem;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.hamburger {
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    z-index: 8;
+    border-radius: 50%;
+    top: 0.5rem;
+    left: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger__parallel--line,
+.hamburger__cross--line {
+    width: 40px;
+    height: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    transition-duration: 500ms;
+    position: relative;
+}
+
+.hamburger__parallel--line::before,
+.hamburger__parallel--line::after,
+.hamburger__cross--line::before,
+.hamburger__cross--line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    transition-duration: 500ms;
+}
+
+.hamburger__parallel--line::before,
+.hamburger__cross--line::before {
+    top: -10px;
+}
+
+.hamburger__parallel--line::after,
+.hamburger__cross--line::after {
+    bottom: -10px;
+}
+
+.hamburger__cross--line {
+    transform: rotate(45deg);
+}
+
+.hamburger__cross--line::before {
+    top: 0;
+    transform: rotate(90deg);
+    background-color: transparent;
+}
+
+.hamburger__cross--line::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+}
+
+.backdrop {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hidden {
+    transform: translateX(-100%);
+}
+
+.display__none {
+    display: none;
+}
+
+.opacity__zero {
+    opacity: 0;
+}
+
+.sidebar {
+    background-color: #42855b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    inset: 0;
+    z-index: 3;
+    padding: 7rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.sidebar p {
+    font-size: 1.2rem;
+}
+
+.fa-heart {
+    color: red;
+    font-size: 1.5rem;
+}
+
+.game__over {
+    position: fixed;
+    top: 0;
+    left: 0;
+    inset: 0;
+    z-index: 10;
+    transition-duration: 500ms;
+    display: flex;
+    flex-direction: column;
+    padding: 7rem 3rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #42855b;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.game__over img {
+    width: 50px;
+    height: auto;
+}
+
+.game__over h2 {
+    font-size: 2rem;
+    margin: 0.5rem auto;
+}
+
+.game__over h3 {
+    margin-top: 1rem;
+}
+
+.game__wrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    font-size: 3rem;
+    margin: 2rem 0 1rem;
+    font-weight: 600;
+}
+
+.game__wrapper h2 {
+    font-size: 2rem;
+    margin: 1rem 0 1rem;
+}
+
+.game__wrapper h3 {
+    font-size: 1.2rem;
+}
+
+.buttons__group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+    margin: 2rem 0;
+}
+
+.buttons__group button {
+    outline: none;
+    cursor: pointer;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 10px solid black;
+    transition-duration: 500ms;
+}
+
+.buttons__group button:active {
+    outline: none;
+    filter: brightness(20%);
+    transform: scale(0.9);
+}
+
+.button__pressed {
+    outline: none;
+    filter: brightness(20%);
+    transform: scale(0.95);
+}
+
+#red {
+    background-color: red;
+}
+
+#green {
+    background-color: green;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+.play__btn {
+    cursor: pointer;
+    border: none;
+    background-color: #42855b;
+    outline: none;
+    width: 50%;
+    font-family: "Monserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+    transition-duration: 500ms;
+}
+
+.play__btn:active {
+    outline: none;
+    filter: brightness(50%);
+    transform: scale(0.95);
+}
+
+.instruction {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    width: 30%;
+    background-color: rgba(66, 133, 91, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    transform-origin: top right;
+    transition-duration: 500ms;
+}
+
+.instruction button {
+    margin-top: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    outline: none;
+    font-family: "Monserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition-duration: 200ms;
+}
+
+.instruction button:hover {
+    color: white;
+    background-color: black;
+}
+
+.instruction button:active {
+    transform: scale(0.98);
+}
+
+.hide__instruction {
+    transform: scale(0);
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        top: 2rem;
+        left: 2rem;
+    }
+    .sidebar {
+        padding: 7rem;
+    }
+    .sidebar h2 {
+        font-size: 2rem;
+    }
+    .sidebar p {
+        font-size: 1.5rem;
+    }
+    .game__wrapper h2 {
+        font-size: 2.5rem;
+        margin: 1rem 0 1rem;
+    }
+    .game__over h2 {
+        font-size: 3rem;
+    }
+    .game__over h3 {
+        font-size: 2rem;
+    }
+    .game__wrapper h3 {
+        font-size: 2rem;
+    }
+    .buttons__group button {
+        width: 180px;
+        height: 180px;
+    }
+    .buttons__group {
+        margin: 2rem 0 3rem;
+        column-gap: 4rem;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        padding: 2rem 5rem;
+    }
+    .game__wrapper {
+        width: 80%;
+    }
+    .buttons__group {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .buttons__group button {
+        width: 160px;
+        height: 160px;
+    }
+}

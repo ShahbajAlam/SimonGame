@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Simon Game</title>
+        <link rel="shortcut icon" href="game.png" type="image/x-icon">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script src="index.js" defer></script>
+    </head>
+    <body>
+
+        <!-- Hamburger -->
+        <div class="hamburger">
+            <div class="hamburger__parallel--line"></div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar hidden">
+            <h2>
+                Simon is a game of short-term memory skill invented by Ralph H.
+                Baer and Howard J. Morrison. The game creates a sequence and
+                requires a user to repeat the sequence. If the user succeeds,
+                the sequence becomes progressively longer and more complex. Once
+                the user fails, the game is over.
+            </h2>
+            <p>
+                <i class="fa-solid fa-chevron-left"></i>
+                <i class="fa-solid fa-chevron-right"></i>
+                 with <i class="fa-solid fa-heart"></i> by <strong>Naheed</strong>
+                <i class="fa-regular fa-copyright"></i> <span></span
+                ></i>
+            </p>
+        </div>
+
+        <!-- Backdrop -->
+        <div class="backdrop display__none"></div>
+
+        <!-- Instruction -->
+        <div class="instruction hide__instruction">
+            <p>Note: If you are using device with keyboard, you can press R, G, B and Y key for RED, GREEN, BLUE and YELLOW button respectively. Pressing Enter key will start the game.</p>
+            <button>Understood</button>
+        </div>
+
+        <!-- Game Over Modal -->
+        <div class="game__over hidden">
+            <img src="sad.png" alt="" />
+            <h2>Oops</h2>
+            <h2>Game over</h2>
+            <h2>Your score is <span>00</span></h2>
+            <h3>Click anywhere to go home</h3>
+        </div>
+
+        <!-- Game -->
+        <div class="game__wrapper">
+            <h1 class="heading">Simon Game</h1>
+            <h3>Press the PLAY button to start</h3>
+            <h2 class="score">Your score is <span>00</span></h2>
+            <div class="buttons__group">
+                <button id="red"></button>
+                <button id="green"></button>
+                <button id="blue"></button>
+                <button id="yellow"></button>
+            </div>
+            <button class="play__btn">PLAY</button>
+        </div>
+    </body>
+</html>
